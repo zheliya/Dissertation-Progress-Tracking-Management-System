@@ -1,0 +1,32 @@
+1- Abstract:
+
+The goal of this project is to create an effective system for coordinating projects and communicating with supervisors and postgraduate students. The existing methods of supervising multiple students and tracking updates, such as using Moodle and relying on emails, have proven inadequate. This challenge can be overcome by developing a web-based application that allows students and supervisors to work seamlessly together. Each project consists of chapters and subtasks that can be customized by supervisors. You can submit files, communicate, evaluate, and access past submissions in dedicated sections. Any updates or submissions will be notified by email.
+The implemented solution improves communication, enhances project management, and streamlines the progress tracking process.
+
+2- Introduction:
+
+Effective project management and communication are crucial for successful thesis completion. However, existing systems like Moodle and email have limitations in managing the complexities involved, especially when supervising multiple postgraduate students. The aim of this project is to develop a web application that addresses these limitations and provides a more efficient solution for managing project progress and communication. By creating a centralized platform for students and supervisors, the project aims to enhance collaboration, streamline communication, and improve progress tracking.
+
+3- Problem Statement:
+
+The current project management methods, such as using Moodle and relying on email communication, pose several challenges. Postgraduate students face difficulties contacting their supervisors for updates, questions, and challenges. Supervisors, on the other hand, struggle to effectively manage multiple students and projects due to the lack of a centralized system. Moreover, vital information can be easily lost in the vast amount of emails exchanged. These challenges hinder effective communication, delay progress, and introduce inefficiencies in project management. There is a need for a comprehensive system that enables seamless communication, progress tracking, and efficient project management for postgraduate students and their supervisors.
+
+4- Thesis Organization:
+
+This thesis is organized as follows:
+
+- Chapter 2: Literature Review
+
+This chapter provides an in-depth analysis of relevant literature on project management, communication tools, and existing systems used in higher education. It explores the shortcomings of current methods and identifies the key requirements for an effective project management system.
+
+- Chapter 3: Methodology
+
+The methodology chapter describes the process undertaken to develop the web application. It includes gathering requirements from clients, conducting analysis, designing the system architecture, and outlining the functionalities of the application.
+
+- Chapter 4: Implementation
+
+In this chapter, the implementation details of the web application are presented. It discusses the technologies used, the system architecture, and the features implemented to address the identified challenges. Additionally, it highlights any complications encountered during the implementation process.
+
+- Chapter 5: Conclusion
+
+The final chapter concludes the thesis by summarizing the achievements of the project. It emphasizes the benefits of the developed web application in addressing the identified challenges. Furthermore, it provides recommendations for future enhancements and suggests areas for further research and improvement.

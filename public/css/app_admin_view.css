@@ -1,0 +1,79 @@
+html, body {
+    margin: 0;
+    height: 100%;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background: url('/images/background2.png'), linear-gradient(180deg, #F8F0FC 0%, #DEEDFB 100%);
+    background-size: contain;
+    background-position: center center;
+}
+
+
+/* main page here and sidebar --------------------------------------------------------------------------------------- */
+
+main {
+    text-align: center;
+}
+
+
+/* admin-supervisor button */
+.go_back_button{
+
+}
+
+
+
+/* project container -------------------------------------------------------------------------------------------------*/
+.project_container {
+    background: #FBFCFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+    height: 67px !important;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 17px;
+}
+
+.student_full_name {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    color: #4A6392;
+}
+
+.student_email {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 500;
+    text-decoration-line: underline;
+    color: #BBBEC5;
+}
+
+.student_department {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 500;
+    color: #BBBEC5;
+}
+
+.student_project_title {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    color: #000000;
+}
+
+.student_project_sub_title {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    color: #848484;
+}
+
+

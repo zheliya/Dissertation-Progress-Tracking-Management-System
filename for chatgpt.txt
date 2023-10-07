@@ -1,0 +1,283 @@
+in laravel
+Attempt to read property "title" on null
+view:
+app_supervisor.blade.php
+<!doctype html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
+    <title>{{ config('app.name', 'Laravel') }}</title>
+
+    <!-- Fonts -->
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
+
+    <!-- css styles -->
+    <link rel="stylesheet" href="{{ URL::asset('css\app.css') }}">
+
+    <!-- Scripts -->
+    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+
+
+
+</head>
+
+<body>
+    <!-- Top navigation-->
+    <nav class="navbar navbar-expand-md bg-body-tertiary ">
+        <div class="container-fluid">
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown student-profile">
+                        <a href="{{ url('/ViewProjectorsupervisorProject/' . $projects->id ) }}"
+                            class="nav-link d-flex align-items-center link-dark text-decoration-none dropdown-toggle"
+                            id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="https://github.com/mdo.png" alt="" width="32" height="32"
+                                class="rounded-circle me-2">
+                            <strong>asdfad fasd fasd as fdasdfmdo</strong>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-start">
+                            <li>
+                                <a href="#"
+                                    class="dropdown-item d-flex align-items-center link-dark text-decoration-none">
+                                    <img src="https://github.com/mdo.png" alt="" width="32" height="32"
+                                        class="rounded-circle me-2">
+                                    <strong>asdfad fasd fasd as fdasdfmdo</strong>
+                                </a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="dropdown-item d-flex align-items-center link-dark text-decoration-none">
+                                    <img src="https://github.com/mdo.png" alt="" width="32" height="32"
+                                        class="rounded-circle me-2">
+                                    <strong>asdfad fasd fasd as fdasdfmdo</strong>
+                                </a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="dropdown-item d-flex align-items-center link-dark text-decoration-none">
+                                    <img src="https://github.com/mdo.png" alt="" width="32" height="32"
+                                        class="rounded-circle me-2">
+                                    <strong>asdfad fasd fasd as fdasdfmdo</strong>
+                                </a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                        </ul>
+                    </li>
+                    <form id="SubmitEdidtTitleCheckbox" method="POST"
+                        action="{{ route('updatecheckbox', ['project_id' => $projects->id]) }} ">
+                        @csrf
+                        <li class="nav-item confirmation-title">
+
+                            <label>
+                                <input class="form-check-input" type="checkbox" name="confirm_title" id="confirm_title"
+                                    {{ $projects->confirm_title ? 'checked' : '' }}>
+                                Enable editing
+                            </label>
+                        </li>
+                        <li class="nav-item title">
+                            <input id="editableTitle" class="title-input {{ $projects->confirm_title ? '' : 'd-none' }}" type="text" name="title"
+                                value="{{ $projects->title }}">
+                            <br>
+                            <input id="editableSubTitle" class="sub-title-input {{ $projects->confirm_title ? '' : 'd-none' }}" type="text" name="subtittle"
+                                value="{{ $projects->subtittle }}" >
+
+                            <div class= "title-input-text {{ $projects->confirm_title ? 'd-none' : '' }}">{{ $projects->title }}</div>
+                            <div class= "title-input-text-input {{ $projects->confirm_title ? 'd-none' : '' }}">{{ $projects->subtittle }}</div>
+
+
+                            <button type="submit" class="btn btn-primary" id="checkboxSubmitButton"
+                                style="display: none;">Save</button>
+
+                    </form>
+                </ul>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item dropdown   supervisor-profile">
+                        {{-- <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> --}}
+                        <a href="#"
+                            class="nav-link d-flex align-items-center link-dark text-decoration-none dropdown-toggle"
+                            id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="https://github.com/mdo.png" alt="" width="32" height="32"
+                                class="rounded-circle me-2">
+                        </a>
+                        {{-- </a> --}}
+                        <ul class="dropdown-menu dropdown-menu-end ">
+                            <li><a class="dropdown-item" href="#">Actionasfd fasdf</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something easdf aslse here</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="progress main-progress-bar " role="progressbarS" aria-label="Example with label" aria-valuenow="70"
+        aria-valuemin="0" aria-valuemax="100">
+        <div class="progress-bar main-progress-bar-scale" style="width: 50%">
+            <value class="main-progress-bar-value">50%</value>
+        </div>
+    </div>
+    <div class="d-flex" id="wrapper">
+        <!-- Sidebar-->
+        <div class="border-0 side-navbar" id="sidebar-wrapper">
+            <div class="list-group list-group-flush">
+
+                <div class="list-group-item list-group-item-action " href="#!">
+                    <a href="{{ url('/ViewProjectorsupervisor' ) }}" class="text-decoration-none">
+                        <button
+                            class="chapter-background accordion__question {{ request()->is('ViewProjectorsupervisor') ? 'open' : '' }}">{{ $project_query->title }}</button>
+                    </a>
+                </div>
+
+                @foreach($projects->chapters as $chapter)
+                    <div class="list-group-item list-group-item-action " href="#!">
+                        <a href="{{ url('/Chapter/' . $chapter->id ) }}"
+                            class="text-decoration-none">
+                            <button
+                                class="chapter-background accordion__question text-start
+                                {{ request()->is('Chapter/'.$chapter->id) || request()->is('Chapter/'.$chapter->id.'/Task/*') ? 'open' : '' }}">
+                                {{ $chapter->title }}
+                            </button>
+                        </a>
+                        <div
+                            class="accordion__collapse
+                                {{ request()->is('Chapter/'.$chapter->id) || request()->is('Chapter/'.$chapter->id.'/Task/*') ? 'collapsing' : 'collapse' }}">
+                            <div class="accordion__content">
+                                @foreach($chapter->tasks as $task)
+
+                                    <a href="{{ url('/Chapter/' . $chapter->id . '/Task/' . $task->id ) }}"
+                                        class="text-decoration-none">
+                                        <div
+                                            class="task task-start
+                                            {{ request()->is('Chapter/'.$chapter->id.'/Task/'.$task->id) ? 'active' : '' }}">
+                                            <i
+                                                class="{{ request()->is('Chapter/'.$chapter->id.'/Task/'.$task->id) ? 'active' : '' }} bi-caret-down-fill task-icon"></i>
+                                            {{ $task->title }}
+                                        </div>
+                                    </a>
+                                @endforeach
+                                <a href="#" class="text-decoration-none">
+                                    <div class="add-task" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">
+                                        <i class="bi bi-caret-down-fill add-task-icon"></i><i class="bi bi-plus-lg"></i>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+
+            </div>
+        </div>
+
+
+
+        <!-- Page content wrapper-->
+        <div id="page-content-wrapper">
+
+            <div class="container-fluied">
+
+                <!-- Main Wrapper -->
+                <button class="mt-1 sidebarbtn" id="sidebarToggle"><i class="sidebar_icon bi bi-caret-right-fill"></i></button>
+                <main>
+                    @yield('content')
+                </main>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="modal fade " id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
+        tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered ">
+            <div class="modal-content add-task-model">
+                <div class="modal-header">
+                    {{-- <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Modal 1</h1> --}}
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form method="POST"
+                        action="{{ route('addtask', ['chapter_id' => $chapters->id]) }}"
+                        enctype="multipart/form-data">
+
+                        @csrf
+                        <label class="form-label" for="task-name">Task Name</label>
+                        <input name="title" class="form-control" type="text" placeholder="task-name" required>
+
+
+                        <label for="formFileMultiple" class="form-label">Template</label>
+                        <input name="template_file" class="form-control" type="file" id="formFile">
+
+
+                        <label for="formFileMultiple" class="form-label">Guidline</label>
+                        <input name="guideline_file" class="form-control" type="file" id="formFile">
+
+                        <input type="datetime-local" name="Deadline" step="1"
+                            pattern="\d{2}-\d{2}-\d{4}\s\d{2}:\d{2}:\d{2}" required>
+
+                        <button type="submit" name="submit">submit</button>
+                        <button type="cancle" name="cancle">cancle</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        @yield('footer')
+    </footer>
+
+
+</body>
+<script type="text/javascript" src="{{ URL::asset('js/app.js') }}"></script>
+
+</html>
+
+
+
+project_query.blade.php:
+@extends('layouts.app_supervisor')
+
+@section('content')
+
+<div class="container text-center" >
+    {{$project_query->title}}
+</div>
+
+@endsection
+
+
+Route:
+Route::get('/ViewProjectorsupervisorProject/{project_id}', [App\Http\Controllers\Controller::class, 'GetProject'])->name('GetProject');
+
+
+controller:
+public function GetProject($project_id){
+
+    $projects = Project::findOrFail($project_id); 
+    $project_query=$projects->project_query;
+    return view('supervisor.project_query',compact('project_query','projects'));
+}
+
